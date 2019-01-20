@@ -14,20 +14,14 @@ git clone git@github.com:guiilab/glyph-overmatch-process.git
 ```
 2. Open 'glyph-overmatch-process' in IDE of choice.
 <br/>
-3. Download labels data from overmatch database. If using a local MongoDB database, export collection using the command line:
+3. Download labels data from overmatch database. If using a local MongoDB database, export collection using the command line. This will export a JSON array of each label object.
 ```sh
 mongoexport --db overmatch --collection labels --out overmatch_labels.json
 ```
-This will export a JSON array of each label object.
+4. Place this exported data in the raw_data folder (./data/Overmatch/raw_data).
 <br/>
-
-4. 
-
-
-4. Place CSV files in replays folder ('./data/replays'). By default, there are two files (126_ESP.csv, 221_ESP.csv) in this folder for demonstration purposes. To process different files, remove these.
+5. For each match in the labels data, place the corresponding match config file (formatted for StratMapper visualization) in the match_config folder (./data/Overmatch/match_data/match_config).
 <br/>
-4. Run 'raw_to_stratmapper.py' file in IDE or shell of choice.
+6. Run generate_glyph_viz.py in IDE of choice or system command line.
 <br/>
-5. Check output folder ('./data/output'). There will be JSON files for each CSV file, as well as a directory 'config' with a 'matches_config.json' file, which is a JSON Array of formatted match files (one for each csv file in replays folder).
-<br/>
-6. To load these files into StratMapper, follow the instructions in this [repository](https://github.com/guiilab/stratmapper-overmatch).
+7.  Check the output folder (./data/Overmatch/output). It will have a JSON file needed for visualization in Glyph. To load this into Glyph, follow the instructions in this [repository](https://github.com/guiilab/glyph-overmatch).
