@@ -1,7 +1,12 @@
+# this script takes the preprocessed labeled data from data/Overmatch/preprocessed_data directory and separates
+    # labeled data by match
+# the output is generated to data/Overmatch/labeled_data directory
+# each output file (i.e. 126_ESP.json) is labeled data for the corresponding match
+
 import os
 import json
 from processing.config import preprocessed_data_folder, labeled_data_folder
-from processing.process_labels import get_name_and_extension
+from processing.process_labels import get_name_and_extension, create_directory
 
 # list any match that needs to be excluded from processing
 exclude_match = []  # for example ['1_ESP', '3_ESP']
@@ -48,6 +53,7 @@ def separate_match_data(data_folder, output_folder):
                     labeled_matches = process_file(data)
 
                     m_c = 1
+                    create_directory(output_folder)
                     for match in labeled_matches:
                         print("\t", m_c, ":", match)
                         with open(output_folder + str(match) + '.json', 'w') as outfile:

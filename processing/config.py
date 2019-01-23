@@ -1,12 +1,15 @@
+# this script contains information about Overmatch and related files/directory
+# the file/directory locations can be changed if needed
+
 game = 'Overmatch'
 
 print("Game: ", game)
 
-# if different player names are wanted. Player names are to be set in match_config/rename_map.json file
-preprocessed_data_folder = '../data/' + game + '/preprocessed_data/'
-
 # raw labeled data folder
 raw_data_folder = '../data/' + game + '/raw_data/'
+
+# preprocessed labeled data folder
+preprocessed_data_folder = '../data/' + game + '/preprocessed_data/'
 
 # this folder keeps the labeled data separated by match
 labeled_data_folder = '../data/' + game + '/labeled_data/'

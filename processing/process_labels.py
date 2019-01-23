@@ -1,3 +1,8 @@
+# this script takes each file from data/Overmatch/labeled_data and processes it
+# it generates Glyph visualization file in json format
+# the output is generated in data/Overmatch/output directory
+# the output filename depends on the number of labeled match data processed
+
 import os
 import json
 from processing.config import labeled_data_folder, output_folder, match_config_folder, game
