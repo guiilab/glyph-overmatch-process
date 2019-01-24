@@ -3,8 +3,8 @@
 # the output is generated in data/Overmatch/preprocessed_data directory
 
 
-from processing.config import raw_data_folder, preprocessed_data_folder
-from processing.process_labels import get_name_and_extension, create_directory
+from config import raw_data_folder, preprocessed_data_folder
+from process_labels import get_name_and_extension, create_directory
 import os
 import json
 

@@ -5,8 +5,8 @@
 
 import os
 import json
-from processing.config import preprocessed_data_folder, labeled_data_folder
-from processing.process_labels import get_name_and_extension, create_directory
+from config import preprocessed_data_folder, labeled_data_folder
+from process_labels import get_name_and_extension, create_directory
 
 # list any match that needs to be excluded from processing
 exclude_match = []  # for example ['1_ESP', '3_ESP']

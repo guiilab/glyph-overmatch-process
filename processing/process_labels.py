@@ -5,7 +5,7 @@
 
 import os
 import json
-from processing.config import labeled_data_folder, output_folder, match_config_folder, game
+from config import labeled_data_folder, output_folder, match_config_folder, game
 
 label_fields = ["_id", "event_ids", "units", "events", "id", "title", "author", "timestamp_range", "description",
                 "match", "__v"]
