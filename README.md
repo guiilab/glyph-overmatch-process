@@ -20,8 +20,9 @@ mongoexport --db overmatch --collection labels --out overmatch_labels.json
 ```
 4. Place this exported data in the raw_data folder (./data/Overmatch/raw_data).
 <br/>
-5. For each match in the labels data, place the corresponding match config file (formatted for StratMapper visualization) in the match_config folder (./data/Overmatch/match_data/match_config).
+1. For each match in the labels data, place the corresponding match config file (formatted for StratMapper visualization) in the match_config folder. Note: these are individual files, not the JSON array of match_config objects. After running the StratMapper formatting process, these files can be found in (./stratmapper-overmatch-process/data/output/match_config) and have the same name as the replay file (e.g '126_ESP.json').
 <br/>
 6. Run generate_glyph_viz.py in IDE of choice or system command line.
 <br/>
 7.  Check the output folder (./data/Overmatch/output). It will have a JSON file needed for visualization in Glyph. To load this into Glyph, follow the instructions in this [repository](https://github.com/guiilab/glyph-overmatch).
+
